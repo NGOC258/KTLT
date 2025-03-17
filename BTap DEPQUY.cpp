@@ -73,9 +73,10 @@ int tongLe(int n) {
 	if (n == 0)
 		return 0;
 	if (n % 2 != 0)
-		return n % 10 + tongChan(n / 10);
-	return tongChan(n / 10);
+		return n % 10 + tongLe(n / 10);
+	return tongLe(n / 10);
 }
+
 
 int chuyen10sang2(int n) {
 	if (n == 0)
